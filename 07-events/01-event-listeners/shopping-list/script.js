@@ -1,35 +1,36 @@
-const clearBtn = document.querySelector('#clear');
+// JS Form
+//getElementById
+const form = document.getElementById("form");
+const titleElement = document.getElementById("title");
+const imageElement = document.getElementById("image");
+const descElement = document.getElementById("desc");
+const categoryElement = document.getElementById("category");
 
-function onClear() {
-  const itemList = document.querySelector('ul');
-  const items = itemList.querySelectorAll('li');
+// addEventListener: lang nghe su kien submit form (click button submit)
+// ten event: 'submit'
 
-  // itemList.innerHTML = '';
+// On DOM Load
+window.addEventListener("DOMContentLoaded", init);
 
-  // items.forEach((item) => item.remove());
-
-  while (itemList.firstChild) {
-    itemList.removeChild(itemList.firstChild);
-  }
+function init() {
+  form.addEventListener("submit", handleSubmit);
 }
 
-// JavaScript Event Listener
-clearBtn.onclick = function () {
-  alert('Clear Items');
-};
+function handleSubmit(event) {
+  //1. chan hanh dong mac dinh day du lieu len url
+  event.preventDefault();
 
-clearBtn.onclick = function () {
-  console.log('Clear Items');
-};
+  //2. Get value input : element.value
+  const title = titleElement.value;
+  const image = imageElement.value;
+  const desc = descElement.value;
+  const category = categoryElement.value;
 
-// addEventListener()
-clearBtn.addEventListener('click', () => alert('Clear Items'));
-
-// Use named function
-clearBtn.addEventListener('click', onClear);
-
-// removeEventListener()
-setTimeout(() => clearBtn.removeEventListener('click', onClear), 5000);
-
-// Fire off event from JS
-setTimeout(() => clearBtn.click(), 5000);
+  const newProduct = {
+    title, // newProduct.title = title
+    image,
+    desc,
+    category,
+  };
+  console.log(newProduct);
+}

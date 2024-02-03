@@ -17,63 +17,68 @@
   <body>
     <div class="container">
       <header>
-        <img src="images/note.png" alt="" />
         <h1>Shopping List</h1>
       </header>
-      <form id="item-form">
+      <form id="form">
+        <!-- Them san pham: Create Product -->
+        <!-- title, image, price, desc, category, branch -->
+        <!-- <input type="text" id="title"> -->
+        <!-- <input type="text" id="image"> -->
+        <!-- <input type="number" /> // price -->
+        <!-- // textarea: nhap nhieu dong
+        // category: select drop dropdown 
+        <select name="" id="">
+          <option value="1">Nam</option>
+        </select> -->
+        <!-- Input type text: title, image ... (1 dong)  -->
+        <!-- Input type number: price, rate ... (number) -->
+        <!-- Description: textarea: nhap nhieu dong thong tin -->
+        <!-- Category: Dropdown : select + option (dropdown) : chon category-->
+        <!-- input, form: deu phai co id (getEmlementId()) -->
+        <!-- Button type=submit: -> bat su kien submit -->
+
+        <!-- input text nhap text: title; image, price (number), desc -->
+        <!-- Select: Category -->
         <div class="form-control">
           <input
             type="text"
             class="form-input"
-            id="item-input"
+            id="title"
             name="item"
-            placeholder="Enter Item"
+            placeholder="Enter Title"
           />
         </div>
         <div class="form-control">
+          <input
+            type="text"
+            class="form-input"
+            id="image"
+            name="item"
+            placeholder="Enter Image"
+          />
+        </div>
+        <div class="form-control">
+          <input
+            type="text"
+            class="form-input"
+            id="desc"
+            name="item"
+            placeholder="Enter Description"
+          />
+        </div>
+        <select id="category" name="category" class="form-input">
+          <option value="">Select Category</option>
+          <option value="1">Laptop Name</option>
+          <option value="2">Iphone</option>
+          <option value="3">PC</option>
+        </select>
+        <div class="form-control">
+          <!-- click button bat su kien submit form -->
           <button type="submit" class="btn">
             <i class="fa-solid fa-plus"></i> Add Item
           </button>
         </div>
       </form>
-
-      <div class="filter">
-        <input
-          type="text"
-          class="form-input-filter"
-          id="filter"
-          placeholder="Filter Items"
-        />
-      </div>
-
-      <ul id="item-list" class="items">
-        <li>
-          Apples
-          <button class="remove-item btn-link text-red">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </li>
-        <li>
-          Orange Juice
-          <button class="remove-item btn-link text-red">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </li>
-        <li>
-          Oreos
-          <button class="remove-item btn-link text-red">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </li>
-        <li>
-          Milk
-          <button class="remove-item btn-link text-red">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </li>
-      </ul>
-
-      <button id="clear" class="btn-clear">Clear All</button>
     </div>
 
     <script src="script.js"></script>
